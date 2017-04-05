@@ -1,0 +1,61 @@
+<head>
+<title> BMC</title>
+<meta >
+<script type="text/javascript" src="./mydashboard.js"></script>
+</head>
+<body>
+<h2>BMC Dashboard</h2>
+
+<div name="LanCfg">
+<table>
+    <tr><label>Lan Configure</label></tr>
+<tr><td>"mac addr"</td>
+    <td><input type="text" name="macAddr"></td>
+</tr>
+<tr><td>"ip addr"</td>
+    <td><input type="text" name="ipaddr"></td>
+</tr>
+</table>
+</div>
+<br>
+
+<div name="FanCtrl">
+    <tr><td><label>Fan Control</label></td></tr>
+    <br> 
+	
+	<tr>
+	   <input type="radio" id="_fanControlAuto">
+	   <label>auto model</label>
+	</tr>
+	<br>
+    <tr>
+        <input type="radio" id="_fanControlManual" checked="checked">
+		<label>manual model</label>
+		<input type="text" id="_fanControlManualNum">
+    </tr>	
+</div>
+<br>
+
+<div name="PowerCtrl">
+<tr><label>Power Control</label>
+</tr>
+<br>
+<tr><input type="radio" id="_powerON">
+    <label>Power ON</label>
+	<br>
+</tr>
+<tr><input type="radio" id="_powerOFF">
+    <label>Power OFF</label>
+	<br>
+</tr>
+<tr><input type="radio" id="_powerRestart">
+    <label>Power Restart</label>
+	<br>
+</tr>
+<tr>
+<td><input type="button" id="_ensure">Ensure</td>
+<td><input type="button" id="_quit">Quit</td>
+</tr>
+</div>
+<div name="SensorReading"></div>
+</body>

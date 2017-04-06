@@ -1,26 +1,67 @@
 <head>
-<title> BMC</title>
-<meta >
+<title>XXX BMC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="./style.css" type="text/css" />
 <script type="text/javascript" src="./mydashboard.js"></script>
 </head>
 <body>
 <h2>BMC Dashboard</h2>
 
-<div name="LanCfg">
-<table>
+<table cellspacing="0", cellpadding="5" border="0" id="dashboard">
+<!--information of BMC-->
+<tr>
+
+<td>
+<table cellspacing="0" cellpadding="5" border="0">
+<tr><label>Firmware Info</label></tr>
+<tr><td><label>Firmware version</label></td><td id="_FmVerInfo"></td></tr>
+<tr><td><label>Build Time</label></td><td id="_FmBuildTime"></td></tr>
+</table>
+</td>
+
+<td>
+<table cellspacing="0",cellpadding="5" border="0">
+<tr><label>FAN INFO</label></tr>
+<tr><td><label>FAN MODE</label></td><td id="_fanModeInfo"></td></tr>
+<tr><td><label>FAN SPEED</label></td><td id="_fanSpeedInfo"></td></tr>
+</table>
+</td>
+
+<td>
+<table cellspacing="0" cellpadding="5" border="0">
+<tr><label>NET INFO</label></tr>
+<tr><td><label>MAC ADDR</label></td><td id="_macAddrInfo"></td></tr>
+<tr><td><label>Net Mode</label></td><td id="_netModeInfo"></td></tr>
+<tr><td><label>IP ADDR</label></td><td id="_ipAddrInfo"></td></tr>
+</table>
+</td>
+
+
+</tr>
+
+
+<!--Configure BMC-->
+<tr>
+<td>
+<table cellspacing="0" cellpadding="5" border="0">
     <tr><label>Lan Configure</label></tr>
 <tr><td>"mac addr"</td>
     <td><input type="text" name="macAddr"></td>
 </tr>
 <tr><td>"ip addr"</td>
     <td><input type="text" name="ipaddr"></td>
+</tr>  
+<tr>
+<td><input type="button" id="_ensure">Ensure</td>
+<td><input type="button" id="_quit">Quit</td>
 </tr>
-</table>
-</div>
-<br>
 
-<div name="FanCtrl">
-    <tr><td><label>Fan Control</label></td></tr>
+</table>
+</td>
+
+<td>
+<table cellspacing="0" cellpadding="5" border="0">
+    <tr><label>Fan Control</label></tr>
     <br> 
 	
 	<tr>
@@ -33,10 +74,16 @@
 		<label>manual model</label>
 		<input type="text" id="_fanControlManualNum">
     </tr>	
-</div>
-<br>
+	<tr>
+<td><input type="button" id="_ensure">Ensure</td>
+<td><input type="button" id="_quit">Quit</td>
+</tr>
 
-<div name="PowerCtrl">
+</table>
+</td>
+
+<td>
+<table cellspacing="0" cellpadding="5" border="0">
 <tr><label>Power Control</label>
 </tr>
 <br>
@@ -56,6 +103,15 @@
 <td><input type="button" id="_ensure">Ensure</td>
 <td><input type="button" id="_quit">Quit</td>
 </tr>
-</div>
-<div name="SensorReading"></div>
+</table>
+</td>
+</tr>
+
+<!--Sensor Reading-->
+<tr>
+<table cellspacing="0" cellpadding="5" border="0">
+<label>SensorReading</label>
+</table>
+</tr>
+</table>
 </body>

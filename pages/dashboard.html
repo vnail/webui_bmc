@@ -1,0 +1,141 @@
+<head>
+<title>xxx BMC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="./style.css" type="text/css" />
+<script type="text/javascript" src="./mydashboard.js"></script>
+</head>
+<body>
+
+<table cellspacing="0" cellpadding="5" border="0" id="dashboard" align="center"> 
+<caption> Casic BMC</caption>
+<!--information of BMC-->
+
+<tr>
+   <th colspan="3">BMC INFO</th> 
+</tr>
+
+<tr>
+   <td>
+       <table cellspacing="0" cellpadding="5" border="0">
+          <tr><label>Firmware Info</label></tr>
+          <tr><td><label>Firmware version</label></td><td id="_FmRev"></td></tr>
+          <tr><td><label>Build Time</label></td><td id="_buildTime"></td></tr>
+       </table>
+   </td>
+
+   <td>
+       <table cellspacing="0",cellpadding="5" border="0">
+          <tr><label>FAN INFO</label></tr>
+          <tr><td><label>FAN MODE</label></td><td id="_fanMode"></td></tr>
+          <tr><td><label>FAN SPEED</label></td><td id="_fanSpeed"></td></tr>
+       </table>
+   </td>
+
+   <td>
+       <table cellspacing="0" cellpadding="5" border="0">
+          <tr><label>NET INFO</label></tr>
+          <tr><td><label>MAC ADDR</label></td><td id="_macAddress"></td></tr>
+          <tr><td><label>Net Mode</label></td><td id="_v40ptMode"></td></tr>
+          <tr><td><label>IP ADDR</label></td><td id="_ipv4Address"></td></tr>
+       </table>
+   </td>
+
+</tr>
+
+
+
+<!--Configure BMC-->
+<tr>
+   <th colspan="3">BMC CFG<th>
+</tr>
+
+<tr>
+   <td>
+       <table cellspacing="0" cellpadding="5" border="0">
+           <tr><label>Lan Configure</label></tr>
+              <tr><td>mac addr</td>
+              <td><input type="text" name="macAddr"></td>
+           </tr>
+           <tr><td>ip addr</td>
+               <td><input type="text" name="ipaddr"></td>
+           </tr>  
+           <tr>
+              <td><input type="button" id="_ensure" value="Ensure"></td>
+              <td><input type="button" id="_quit" value="Quit"></td>
+           </tr>
+        </table>
+   </td>
+
+   <td>
+       <table cellspacing="0" cellpadding="5" border="0">
+            <tr><label>Fan Control</label></tr>
+			<br>
+	        <tr>
+	            <input type="radio" id="_fanControlAuto">
+	            <label>auto model</label>
+	        </tr>
+			<br>
+            <tr>
+               <input type="radio" id="_fanControlManual" checked="checked">
+	           <label>manual model</label>
+		       <input type="text" id="_fanControlManualNum">
+            </tr>
+			<br>
+	        <tr>
+               <td><input type="button" id="_ensure" value="Ensure"></td>
+               <td><input type="button" id="_quit" value="Quit"></td>
+            </tr>
+       </table>
+   </td>
+
+   <td>
+      <table cellspacing="0" cellpadding="5" border="0">
+         <tr><label>Power Control</label>
+         </tr>
+		 <br>
+         <tr><input type="radio" id="_powerON">
+            <label>Power ON</label>
+         </tr>
+		 <br>
+         <tr><input type="radio" id="_powerOFF">
+           <label>Power OFF</label>
+         </tr>
+		 <br>
+         <tr><input type="radio" id="_powerRestart">
+           <label>Power Restart</label>
+         </tr>
+		 <br>
+         <tr>
+           <td><input type="button" id="_ensure" value="Ensure"></td>
+           <td><input type="button" id="_quit" value="Quit"></td>
+         </tr>
+      </table>
+   </td>
+</tr>
+<!--Sensor Reading-->
+<tr>
+  <th colspan="3">Sensor Reading<th>
+</tr>
+<tr>
+   <td>
+      <table cellspacing="0" cellpadding="5" border="0">
+         <label>SensorReading</label>
+	     <br>
+		 <tr>
+	          <label>Sensor_1</label>
+	       </tr>
+	       <br> 
+	       <tr>
+	          <label>Sensor_1</label>
+	       </tr>
+	       <br> 
+	       <tr>
+	         <label>Sensor_1</label>
+	       </tr>
+	       <br>
+       </table>
+   </td>
+</tr>
+
+</table>
+</body>
